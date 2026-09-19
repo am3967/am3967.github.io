@@ -1,0 +1,34 @@
+<DOCTYPE! html>
+<html>
+<head>
+	<meta charset = "UTF-8" />
+	<title> Compund Interest Rate #2</title>
+
+	<style>
+			body {background-color: bisque; font-family: optima;
+								color: brown; text-align: center}
+			p { font-size: 20px}
+			button {font-size: 20px; background-color: coral}
+			input { font-size: 20px}
+	 </style>
+
+</head>
+<body>
+	<script>
+		function inRate(c, t, r, n) {
+			totalDep = Math.round (c * Math.pow((1+(r/n)), n*t));
+			return totalDep;
+		}
+
+		var origAmount = prompt("Enther the Original Amount")
+		var numYears = prompt("Enther the number of years")
+		var intRate = prompt("Enther the rate of interest")
+		var numPayYear = prompt("Enther the number of interest payments per year")
+
+		document.write("The Total amount calculated" + inRate (origAmount, numYears, intRate, numPayYear));
+
+	</script>
+
+
+</body>
+</html>
